@@ -11,7 +11,7 @@ O objetivo do MVP é criar um módulo simples de prontuário eletrônico para re
 - JavaScript
 - Python
 - Flask
-- JSON para persistência simplificada
+- JSON 
 
 ## Estrutura de pastas
 
