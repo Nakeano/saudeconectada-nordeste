@@ -24,9 +24,8 @@ saudeconectada-nordeste/
 │   ├── prontuarios.example.json
 │   └── requirements.txt
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
+│   ├── Atendimentos.html
+│   ├── Informações.html
 ├── docs/
 │   └── diagnostico.md
 ├── README.md
