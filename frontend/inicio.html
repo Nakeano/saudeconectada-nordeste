@@ -1,1 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaúdeConectada Nordeste — Início</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #eef2f7;
+      color: #1e293b;
+      min-height: 100vh;
+    }
+
+    /* ───────── TOPBAR ───────── */
+
+    .topbar {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .topbar-logo {
+      font-size: 17px;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .topbar-sub {
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    /* ───────── WRAPPER ───────── */
+
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* ───────── HERO ───────── */
+
+    .hero {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+      border: 1px solid #bfdbfe;
+    }
+
+    .hero h1 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: #64748b;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ───────── CARDS ───────── */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px 28px 28px;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.09);
+      border-color: #cbd5e1;
+    }
+
+    .card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px;
+    }
+
+    .icon-blue {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .icon-teal {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+    }
+
+    .card-icon-wrap svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1e293b;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    .card-link svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover .card-link svg {
+      transform: translateX(3px);
+    }
+
+    .link-blue {
+      color: #2563eb;
+    }
+
+    .link-teal {
+      color: #16a34a;
+    }
+
+    .card-accent {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+
+    .accent-blue {
+      background: #2563eb;
+    }
+
+    .accent-teal {
+      background: #16a34a;
+    }
+
+    /* ───────── FOOTER ───────── */
+
+    .footer {
+      text-align: center;
+      margin-top: 52px;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.7;
+    }
+
+    /* ───────── RESPONSIVO ───────── */
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .wrapper {
+        padding: 40px 16px 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+
+  <div class="topbar">
+    <span class="topbar-logo">SaúdeConectada Nordeste</span>
+    <span class="topbar-sub">— Hospital Regional Santa Cruz</span>
+  </div>
+
+  <!-- CONTEÚDO -->
+
+  <div class="wrapper">
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+      <span class="hero-badge">
+        Sistema de Gestão de Atendimentos
+      </span>
+
+      <h1>Bem-vindo ao painel principal</h1>
+
+      <p>
+        Registre novos atendimentos ou consulte e gerencie
+        os prontuários já cadastrados no sistema.
+      </p>
+
+    </div>
+
+    <!-- CARDS DE NAVEGAÇÃO -->
+
+    <div class="cards">
+
+      <!-- Card 1 — Novo atendimento -->
+      <a href="/novo-atendimento.html" class="card">
+
+        <div class="card-icon-wrap icon-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="12" y1="18" x2="12" y2="12"/>
+            <line x1="9" y1="15" x2="15" y2="15"/>
+          </svg>
+        </div>
+
+        <h2>Novo atendimento</h2>
+
+        <p>
+          Registre um paciente, preencha os dados de identificação,
+          queixa clínica e sinais vitais aferidos.
+        </p>
+
+        <span class="card-link link-blue">
+          Iniciar registro
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </span>
+
+        <div class="card-accent accent-blue"></div>
+
+      </a>
+
+      <!-- Card 2 — Acessar dados -->
+      <a href="/acessar-dados.html" class="card">
+
+        <div class="card-icon-wrap icon-teal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+          </svg>
+        </div>
+
+        <h2>Acessar dados</h2>
+
+        <p>
+          Visualize, consulte e gerencie todos os prontuários
+          e pacientes cadastrados no banco de dados.
+        </p>
+
+        <span class="card-link link-teal">
+          Ver prontuários
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </span>
+
+        <div class="card-accent accent-teal"></div>
+
+      </a>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      SaúdeConectada Nordeste &mdash; Hospital Regional Santa Cruz
+      <br>
+      Desenvolvido por estudantes de Engenharia Biomédica
+    </div>
+
+  </div>
+
+</body>
+
+</html>
